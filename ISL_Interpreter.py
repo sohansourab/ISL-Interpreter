@@ -1,3 +1,5 @@
+# This is the part of the code responsible for Video Capturing and grayscaling and resizing.
+
 import numpy as np
 import cv2
 
