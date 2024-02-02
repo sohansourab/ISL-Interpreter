@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 import cv2
 
-# Read Data from MOV Files
+# Reading the data
 # DATADIR = 'C:/Users/nandi/AppData/Local/Programs/Python/Python310/Hackathon/Data/MOVs/Adjectives'
 DATADIR = 'C:/Users/nandi/AppData/Local/Programs/Python/Python310/Hackathon/Data/ISL_Dataset'
 CATEGORIES = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'I', 'K', 'L', 'M',
@@ -68,13 +68,13 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten, Conv2D, MaxPooling2D
 
-# Load the data
+# Loading the data
 X = pickle.load(open("C:/Users/nandi/AppData/Local/Programs/Python/Python310/Hackathon/Sign language interpreter/X.pickle", "rb"))
 y = pickle.load(open("C:/Users/nandi/AppData/Local/Programs/Python/Python310/Hackathon/Sign language interpreter/y.pickle", "rb"))
 
 X = X / 255.0
 
-# Build the model
+# Building the model
 model = Sequential()
 
 model.add(Conv2D(64, (3, 3), input_shape=X.shape[1:]))
@@ -85,15 +85,30 @@ model.add(Conv2D(64, (3, 3)))
 model.add(Activation("relu"))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
-model.add(Flatten())
-model.add(Dense(64))
-model.add(Dense(1, activation='softmax'))  # Added activation directly in Dense layer
+model.add(Conv2D(128, (3, 3)))
+model.add(Activation("relu"))
+model.add(MaxPooling2D(pool_size=(2, 2)))
 
-# Compile the model
-model.compile(loss='categorical_crossentropy',
+model.add(Flatten())
+model.add(Dense(256))
+model.add(Activation("relu"))
+model.add(Dropout(0.5))
+
+model.add(Dense(128))
+model.add(Activation("relu"))
+model.add(Dropout(0.5))
+
+model.add(Dense(len(CATEGORIES), activation='softmax'))
+
+# Compiling the model
+model.compile(loss='sparse_categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 
-# Train the model
-model.fit(X, y, batch_size=1, epochs=10, validation_split=0.1)
+# Implementing learning rate scheduler
+lr_scheduler = tf.keras.callbacks.ReduceLROnPlateau(factor=0.5, patience=3, min_lr=1e-6)
 
+# Training the model
+history = model.fit(X, y, batch_size=32, epochs=20, validation_split=0.1, callbacks=[lr_scheduler])
+
+model.save("ISL_Interpreter")
