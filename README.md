@@ -13,13 +13,14 @@ So, the aim is to develop a user-friendly human-computer interface (HCI) where t
 This System will be Beneficial for Both Dumb/Deaf People and the People Who do not understand the Sign Language. They need to do that with sign Language gestures and this system will identify what he/she is trying to say after identification. It gives the output in the form of text-format
 ## Model architecture:
 Our AI uses a convolution neural network (CNN) that works on deep learning.
+[![Model Architecture](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/model_arch.png)](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/model_arch.png)
 ## Training: 
 The training of the model is done through various datasets found online. This dataset is divided into training data and testing data. This data is iterated through and filtered by the model and then converted  into a data format that the AI can understand. 
 ## Evaluation:
 The AI is made so that it outputs its progress, accuracy, and loss. We can also use an in-built sub-function called Tensorboard
 to display real-time data such as accuracy and loss for both the training data and the testing data and gives a graphical representation for the same over a number of trials of the model.
 
-[![Model Architecture](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/model_arch.png)](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/model_arch.png)
+[![epoch_accuracy](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/epoch_accuracy.png)](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/epoch_accuracy.png)
 
 ## Restrictions:
 Given the time constraint and the lack of fast internet and the enoromous file sizes required to be downloaded as the datasets, we were unable to train the model to be more accurate. The AI model is able to recognize letters but not very often and not very accurately.
