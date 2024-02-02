@@ -21,7 +21,7 @@ The AI is made so that it outputs its progress, accuracy, and loss. We can also 
 to display real-time data such as accuracy and loss for both the training data and the testing data and gives a graphical representation for the same over a number of trials of the model.
 ### EPOCH_ACCURACY:
 [![epoch_accuracy](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/epoch_accuracy.svg)](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/epoch_accuracy.svg)
-# EPOCH_LOSS:
-
+### EPOCH_LOSS:
+[![epoch_loss](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/epoch_loss.svg)](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/epoch_loss.svg)
 ## Restrictions:
 Given the time constraint and the lack of fast internet and the enoromous file sizes required to be downloaded as the datasets, we were unable to train the model to be more accurate. The AI model is able to recognize letters but not very often and not very accurately.
