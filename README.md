@@ -19,7 +19,7 @@ The training of the model is done through various datasets found online. This da
 ## Evaluation:
 The AI is made so that it outputs its progress, accuracy, and loss. We can also use an in-built sub-function called Tensorboard
 to display real-time data such as accuracy and loss for both the training data and the testing data and gives a graphical representation for the same over a number of trials of the model.
-
+### EPOCH_ACCURACY:
 [![epoch_accuracy](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/epoch_accuracy.svg)](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/epoch_accuracy.svg)
 
 ## Restrictions:
