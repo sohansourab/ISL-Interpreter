@@ -23,5 +23,9 @@ to display real-time data such as accuracy and loss for both the training data a
 [![epoch_accuracy](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/epoch_accuracy.svg)](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/epoch_accuracy.svg)
 ### EPOCH_LOSS:
 [![epoch_loss](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/epoch_loss.svg)](https://github.com/sohansourab/ISL-Interpreter/blob/main/Images/epoch_loss.svg)
+
+🟠 - Training data
+🔵 - Testing data
+
 ## Restrictions:
 Given the time constraint and the lack of fast internet and the enoromous file sizes required to be downloaded as the datasets, we were unable to train the model to be more accurate. The AI model is able to recognize letters but not very often and not very accurately.
