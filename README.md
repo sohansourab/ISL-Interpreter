@@ -13,5 +13,8 @@ So, the aim is to develop a user-friendly human-computer interface (HCI) where t
 This System will be Beneficial for Both Dumb/Deaf People and the People Who do not understand the Sign Language. They just need to do that with sign Language gestures and this system will identify what he/she is trying to say after identification it gives the output in the form of Text format
 ## Model architecture:
 Our AI uses that uses convolution neural network (CNN) that works on deep learning.
-## Training:  
-
+## Training: 
+The training of the model is done through various datasets found online. This dataset is divided into training data and testing data. This data is iterated through and filtered by the model and then converted  into a data format that the AI can understand. 
+## Evaluation:
+The AI is made in such a way that it outputs its progress, accuracy, and loss. We can also use an in-built sub-function called Tensorboard
+to display real-time data such as accuracy and loss for both the training data and the testing data and gives a graphical representation for the same over a number of trails of the model.
