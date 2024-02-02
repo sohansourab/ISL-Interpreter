@@ -19,6 +19,7 @@ The training of the model is done through various datasets found online. This da
 The AI is made so that it outputs its progress, accuracy, and loss. We can also use an in-built sub-function called Tensorboard
 to display real-time data such as accuracy and loss for both the training data and the testing data and gives a graphical representation for the same over a number of trials of the model.
 
-[![Model Architecture](https://raw.githubusercontent.com/Nan_x3/ISL-Interpreter/Images/model_architecture.png)](https://raw.githubusercontent.com/Nan_x3/ISL-Interpreter/Images/model_architecture.png)
+[![Model Architecture](https://raw.githubusercontent.com/sohansourab/ISL-Interpreter/Images/model_architecture.png)](https://raw.githubusercontent.com/sohansourab/ISL-Interpreter/Images/model_architecture.png)  
+
 ## Restrictions:
 Given the time constraint and the lack of fast internet and the enoromous file sizes required to be downloaded as the datasets, we were unable to train the model to be more accurate. The AI model is able to recognize letters but not very often and not very accurately.
